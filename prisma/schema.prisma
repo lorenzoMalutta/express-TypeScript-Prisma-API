@@ -11,12 +11,13 @@ datasource db {
 }
 
 model User {
-    id      Int       @id @unique @default(autoincrement())
-    name    String
-    cpf     Int       @unique
-    email   String    @unique
-    Order   Order[]
-    Address Address[]
+    id       Int       @id @unique @default(autoincrement())
+    name     String
+    cpf      Int       @unique
+    email    String    @unique
+    password String    @unique
+    Order    Order[]
+    Address  Address[]
 }
 
 model Address {
@@ -64,4 +65,5 @@ model Admin {
     name     String
     email    String @unique
     password String
+    role     String
 }
