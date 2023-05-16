@@ -1,0 +1,15 @@
+### TODO-BUG ###
++ fix the bug in userController where the user is not being saved to the database
+
+### TODO-HIGH ###
++ add better types to the itens
++ add better handling of errors
+
+### TODO-MEDIUM ###
++ add token authentication JWT
++ add token expiration
++ add refresh token
++ add tests
+
+### TODO-LOW ###
++ add a documentation
