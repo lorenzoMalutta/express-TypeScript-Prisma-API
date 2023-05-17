@@ -1,15 +1,15 @@
 ### TODO-BUG ###
-+ fix the bug in userController where the user is not being saved to the database
++ fix the bug in userController where the user is not being saved to the database - FIXED
 
 ### TODO-HIGH ###
-+ add better types to the itens
-+ add better handling of errors
++ add better types to the itens - DONE
++ add better handling of errors - DONE
 
 ### TODO-MEDIUM ###
-+ add token authentication JWT
++ add token authentication JWT - DONE
 + add token expiration
 + add refresh token
 + add tests
 
 ### TODO-LOW ###
-+ add a documentation
++ add a documentation 
