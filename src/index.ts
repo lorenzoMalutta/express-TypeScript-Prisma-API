@@ -1,6 +1,4 @@
 import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import router from './router/router';
 const app = express();
@@ -9,9 +7,8 @@ dotenv.config();
 
 app.use(express.json());
 
-app.use("/api", router);
+app.use(router);
 
-app.listen(3000, () => {
-    console.log("Server is listening on port 3000");
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server running on port ${process.env.PORT || 3000}`);
 });
-
