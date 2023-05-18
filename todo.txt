@@ -2,13 +2,15 @@
 + fix the bug in userController where the user is not being saved to the database - FIXED
 
 ### TODO-HIGH ###
++ add crud to new users 
++ add crud to new itens
 + add better types to the itens - DONE
 + add better handling of errors - DONE
 
 ### TODO-MEDIUM ###
 + add token authentication JWT - DONE
-+ add token expiration
-+ add refresh token
++ add token expiration - DONE
++ add refresh token - DONE
 + add tests
 
 ### TODO-LOW ###
