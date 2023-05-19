@@ -1,9 +1,12 @@
 import express from 'express';
-import { deleteUser, getUser, getUsers, updateUser } from '../http/controller/userController';
-import { RegisterUserController } from '../useCase/registerUser/RegisterUserController';
-import { AuthUserController } from '../useCase/authUser/AuthUserController';
+import { RegisterUserController } from '../useCase/user/registerUser/RegisterUserController';
+import { AuthUserController } from '../useCase/authorization/authUser/AuthUserController';
 import { ensureToken } from '../middlewares/ensureToken';
-import { RefreshTokenController } from '../useCase/refreshToken/RefreshTokenController';
+import { RefreshTokenController } from '../useCase/authorization/refreshToken/RefreshTokenController';
+import { GetUsersController } from '../useCase/user/getUsers/GetUsersController';
+import { GetUserController } from '../useCase/user/getUser/GetUserController';
+import { UpdateUserController } from '../useCase/user/updateUser/UpdateUserController';
+import { DeleteUserController } from '../useCase/user/deleteUser/DeleteUserController';
 
 const router = express.Router();
 
@@ -13,10 +16,18 @@ const authUserController = new AuthUserController();
 
 const refreshTokenController = new RefreshTokenController();
 
-router.get('/users', ensureToken, getUsers);
-router.delete('/users/:id', ensureToken, deleteUser);
-router.put('/users/:id', ensureToken, updateUser);
-router.get('/users/:id', ensureToken, getUser);
+const deleteUserController = new DeleteUserController();
+
+const updateUserController = new UpdateUserController();
+
+const getUserController = new GetUserController();
+
+const getUsersController = new GetUsersController();
+
+router.get('/users', getUsersController.getUsers);
+router.delete('/users/:id', deleteUserController.deleteUser);
+router.put('/users/:id', updateUserController.updateUser);
+router.get('/users/:id', getUserController.getUser);
 
 router.post('/refresh-token', refreshTokenController.refreshToken);
 
