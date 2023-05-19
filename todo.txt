@@ -2,8 +2,9 @@
 + fix the bug in userController where the user is not being saved to the database - FIXED
 
 ### TODO-HIGH ###
-+ add crud to new users 
-+ add crud to new itens
++ add provider to search if the password and cpf already exists 
++ add crud to new users - DONE
++ add crud to new itens - DONE
 + add better types to the itens - DONE
 + add better handling of errors - DONE
 
