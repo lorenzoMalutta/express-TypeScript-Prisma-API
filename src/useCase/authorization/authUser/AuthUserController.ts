@@ -1,6 +1,6 @@
 import { AuthUserUseCase } from "./AuthUserUseCase";
 import { Request, Response } from "express";
-import IAuth from "../../interface/IAuth";
+import IAuth from "../../../interface/IAuth";
 
 
 export class AuthUserController {

@@ -1,9 +1,8 @@
-import IAuth from "../../interface/IAuth";
+import IAuth from "../../../interface/IAuth";
 import { PrismaClient } from '@prisma/client';
 import { compare } from 'bcrypt';
-import { sign } from 'jsonwebtoken';
-import { GenerateRefreshToken } from "../../provider/GenerateRefreshToken";
-import { GenerateTokenProvider } from "../../provider/GenerateTokenProvider";
+import { GenerateRefreshToken } from "../../../provider/GenerateRefreshToken";
+import { GenerateTokenProvider } from "../../../provider/GenerateTokenProvider";
 
 const prisma = new PrismaClient();
 

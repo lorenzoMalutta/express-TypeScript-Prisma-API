@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client"
-import { GenerateTokenProvider } from "../../provider/GenerateTokenProvider";
+import { GenerateTokenProvider } from "../../../provider/GenerateTokenProvider";
 import dayjs from "dayjs";
 
 const prisma = new PrismaClient();
