@@ -13,7 +13,7 @@ datasource db {
 model User {
     id           Int            @id @unique @default(autoincrement())
     name         String
-    cpf          BigInt         @unique
+    cpf          String         @unique
     email        String         @unique
     password     String         @unique
     Order        Order[]
@@ -24,7 +24,7 @@ model User {
 model Address {
     id        Int      @id @default(autoincrement())
     street    String
-    number    BigInt
+    number    Int
     district  String
     city      String
     state     String

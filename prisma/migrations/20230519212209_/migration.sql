@@ -2,7 +2,7 @@
 CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
-    "cpf" BIGINT NOT NULL,
+    "cpf" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
 
@@ -13,7 +13,7 @@ CREATE TABLE "User" (
 CREATE TABLE "Address" (
     "id" SERIAL NOT NULL,
     "street" TEXT NOT NULL,
-    "number" BIGINT NOT NULL,
+    "number" INTEGER NOT NULL,
     "district" TEXT NOT NULL,
     "city" TEXT NOT NULL,
     "state" TEXT NOT NULL,
